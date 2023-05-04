@@ -6,15 +6,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
+    <section id="root">
       <h1>Encripted Message</h1>
-      <h3>Digite sua mensagem:</h3>
-      <input type="text">
-      <h3>Codificação</h3>
-      <input type="text">
-      <button>Codificar</button>
-      <button>Descodificar</button>
-    </div>
+      <label for="message-input">Digite a mensagem:</label>
+      <input type="text" id="message-input">
+      <label for="offset-input">Deslocamento:</label>
+      <input type="number" id="offset-input">
+      <br>
+      <button id="encode-button">Codificar</button>
+      <button id="decode-button">Descodificar</button>
+      <br>
+      <label for="result-output">Resultado:</label>
+      <textarea id="result-output"></textarea>
+    </section>
     <script src="index.js" type="module"></script>
   </body>
 </html>
