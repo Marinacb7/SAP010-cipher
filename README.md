@@ -1,16 +1,12 @@
-# Cifra de César
+# Decodificação FBI
 
 ## Índice
 
-* [1. Prefácio](#1-prefácio)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Considerações gerais](#3-considerações-gerais)
-* [4. Marco: Critérios de Aceitação Mínimos do Projeto](#5-marco-critérios-de-aceitação-mínimos-do-projeto)
-* [5. Marco Opcional: Adicione suporte para letras minúsculas e outros caracteres](#5-marco-opcional-adicione-suporte-para-letras-minúsculas-e-outros-caracteres)
-* [6. Considerações técnicas](#6-considerações-técnicas)
-* [7. Objetivos de aprendizagem](#7-objetivos-de-aprendizagem)
-* [8. Guias, dicas e leituras complementares](#8-guias-dicas-e-leituras-complementares)
-* [9. Para considerar o feedback do projeto](#9-para-considerar-o-feedback-do-projeto)
+* [1. Introdução](#1-introdução)
+* [2. Instalação](#2-instalação)
+* [3. Uso](#3-uso)
+* [4. Decisões Tomadas](#5-decisões-tomadas)
+* [5. Futuras Melhorias](#5-futuras-melhorias)
 
 ***
 
