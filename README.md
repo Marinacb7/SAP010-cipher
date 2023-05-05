@@ -10,30 +10,14 @@
 
 ***
 
-## 1. Prefácio
+## 1. Introdução
+A Cifra de César é um método simples de criptografia em que cada letra de uma mensagem é substituída por outra letra que se encontra um número fixo de posições à frente no alfabeto. Por exemplo, se a chave for 3, a letra A é substituída pela letra D, a letra B pela letra E, e assim por diante.
 
-Cifrar significa codificar. A [cifra de César](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar)
-é um dos primeiros tipos de criptografias conhecidas na história.
-O imperador romano Júlio César utilizava essa cifra para enviar
-ordens secretas aos seus generais no campo de batalha.
+Este método de criptografia foi utilizado pelo Imperador Romano Júlio César para enviar mensagens secretas aos seus generais em tempos de guerra, daí o seu nome.
 
-A cifra de César é uma das técnicas mais simples de cifrar uma mensagem. É um
-tipo de cifra por substituição, em que cada letra do texto original é
-substituida por outra que se encontra há um número fixo de posições
-(deslocamento) mais a frente do mesmo alfabeto.
+Embora a Cifra de César seja fácil de entender e implementar, ela é facilmente decifrada por meio de técnicas de análise de frequência, tornando-a inadequada para a criptografia de dados sensíveis. No entanto, ela é frequentemente utilizada em jogos e desafios criptográficos, bem como um exemplo introdutório em cursos de segurança da informação.
 
-Por exemplo se usarmos o deslocamento (_offset_) de 3 posições:
-
-* Alfabeto sem cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-* Alfabeto com cifra:  D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
-* A letra A será D
-* A palavra CASA será FDVD
-
-Atualmente todas as cifras de substituição alfabética simples, são decifradas
-com facilidade e não oferecem muita segurança na comunicação por si mesma,
-mas a cifra de César muitas vezes pode fazer parte de um sistema
-mais complexo de criptografia, como
-a cifra de Vigenère, e tem aplicação no sistema ROT13.
+A ideia inicial deste aplicativo foi gerar um sistema que permitisse aos agentes do FBI a digitação de uma mensagem e um valor de deslocamento, que determina quantas posições cada letra deve ser deslocada na cifra, possibilitando a resolução de mensagens recebidas ou encontradas em evidências de forma mais ágil. É possível então escolher se deseja criptografar ou descriptografar a mensagem, e o resultado será exibido.
 
 ## 2. Resumo do projeto
 
