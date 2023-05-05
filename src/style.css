@@ -30,4 +30,13 @@ label {
     color: var(--primary-color);
   }
 
-  
+  /* Estilo dos inputs */
+input[type="number"],
+textarea {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
