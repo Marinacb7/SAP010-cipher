@@ -6,12 +6,12 @@
   }
 
   /* Body */
-  body {
+  background-image {
     opacity: 0,9;
     backdrop-filter: blur(10px);
 }
 
-  /* Estilo da seção principal */
+  /* Estilo da seção principal */ 
 #root {
     display: flex;
     flex-direction: column;
