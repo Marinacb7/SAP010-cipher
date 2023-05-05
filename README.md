@@ -33,19 +33,19 @@ O aplicativo só funciona com letras maiúsculas, então todas as letras minúsc
 
 Ao projetar este aplicativo, várias decisões foram tomadas:
 
-*A Cifra de César foi escolhida como o método de criptografia devido à sua simplicidade e facilidade de implementação.
-*O aplicativo foi projetado para funcionar apenas com letras maiúsculas para simplificar o código e reduzir o risco de erros.
-*A interface do usuário foi projetada com um esquema de cores azul/vermelho/amarelo para seguir o logotipo do FBI.
-*Caixas arredondadas foram usadas para tornar as seções de mensagens e resultados visualmente mais atraentes e distinguir dos campos de entrada.
-*Botões responsivos foram usados para melhorar a experiência do usuário em diferentes dispositivos e tamanhos de tela.
-*Uma imagem de fundo foi adicionada para criar um efeito de marca d'água e dar ao aplicativo uma aparência mais profissional.
+* A Cifra de César foi escolhida como o método de criptografia devido à sua simplicidade e facilidade de implementação.
+* O aplicativo foi projetado para funcionar apenas com letras maiúsculas para simplificar o código e reduzir o risco de erros.
+* A interface do usuário foi projetada com um esquema de cores azul/vermelho/amarelo para seguir o logotipo do FBI.
+* Caixas arredondadas foram usadas para tornar as seções de mensagens e resultados visualmente mais atraentes e distinguir dos campos de entrada.
+* Botões responsivos foram usados para melhorar a experiência do usuário em diferentes dispositivos e tamanhos de tela.
+* Uma imagem de fundo foi adicionada para criar um efeito de marca d'água e dar ao aplicativo uma aparência mais profissional.
 
 ## 5. Futuras Melhorias
 
 Aqui estão algumas ideias para futuras melhorias no aplicativo:
 
-*Permitir que o usuário escolha entre diferentes cifras, como a Cifra de César ou a Cifra de Vigenere.
-*Adicionar suporte para letras minúsculas, números e símbolos.
-*Melhorar a interface do usuário com estilização e animações mais avançadas.
-*Adicionar um botão de cópia para a área de transferência para facilitar a cópia da mensagem criptografada ou descriptografada.
-*Adicionar um botão "redefinir" para limpar os campos de entrada e saída.
+* Permitir que o usuário escolha entre diferentes cifras, como a Cifra de César ou a Cifra de Vigenere.
+* Adicionar suporte para letras minúsculas, números e símbolos.
+* Melhorar a interface do usuário com estilização e animações mais avançadas.
+* Adicionar um botão de cópia para a área de transferência para facilitar a cópia da mensagem criptografada ou descriptografada.
+* Adicionar um botão "redefinir" para limpar os campos de entrada e saída.
