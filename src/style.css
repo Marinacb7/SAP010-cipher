@@ -14,6 +14,7 @@
     height: 100vh;
     background-image: url('FBI.png');
     background-repeat: repeat;
+    opacity: 0,5;
   }
 
   /* Estilo dos títulos */
