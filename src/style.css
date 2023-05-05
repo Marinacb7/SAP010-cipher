@@ -58,3 +58,13 @@ button {
 #encode-button {
     background-color: var(--secondary-color);
   }
+#encode-button:hover {
+    background-color: darken(var(--secondary-color), 10%);
+  }
+#decode-button {
+    background-color: var(--tertiary-color);
+  }
+  
+#decode-button:hover {
+    background-color: darken(var(--tertiary-color), 10%);
+  }
