@@ -25,9 +25,9 @@
   
   /* Estilo dos labels */
   label {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-right: 1rem;
-    color: white;
+    color: rgb(11, 2, 51);
   }
   
   /* Estilo dos inputs */
