@@ -4,3 +4,16 @@
     --secondary-color: #c8102e; /* vermelho */
     --tertiary-color: #fedf00; /* amarelo */
   }
+
+  /* Estilo da seção principal */
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('FBI.png');
+    background-repeat: repeat;
+  }
+
+  
