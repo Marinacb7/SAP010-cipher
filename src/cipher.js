@@ -1,3 +1,4 @@
+//Codificar a mensagem
 const cipher = {
   encode: function(offset, string) {
     if (typeof offset !== 'number') {
@@ -19,6 +20,7 @@ const cipher = {
     return result;
   },
 
+// Decodificar a mensagem
   decode: function(offset, string) {
     if (typeof offset !== 'number') {
       throw new TypeError('O primeiro argumento deve ser um número.');
