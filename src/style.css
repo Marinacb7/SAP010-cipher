@@ -23,4 +23,11 @@ h1 {
     color: var(--primary-color);
   }
 
+  /* Estilo dos labels */
+label {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: var(--primary-color);
+  }
+
   
