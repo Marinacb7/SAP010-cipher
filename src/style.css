@@ -1,0 +1,6 @@
+/* Definição das cores do esquema */
+:root {
+    --primary-color: #0b2c5f; /* azul escuro */
+    --secondary-color: #c8102e; /* vermelho */
+    --tertiary-color: #fedf00; /* amarelo */
+  }
