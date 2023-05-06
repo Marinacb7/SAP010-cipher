@@ -9,16 +9,16 @@ const cipher = {
     }
     let result = "";
     for (let i = 0; i < string.length; i++) {
-    const charCode = string.charCodeAt(i);
-    if (charCode >= 65 && charCode <= 90) {
-    const shiftedCharCode = ((charCode - 65 + offset) % 26) + 65;
-    result += String.fromCharCode(shiftedCharCode);
-  } else {
-     result += string.charAt(i);
-  }
-  }
+      const charCode = string.charCodeAt(i);
+      if (charCode >= 65 && charCode <= 90) {
+        const shiftedCharCode = ((charCode - 65 + offset) % 26) + 65;
+        result += String.fromCharCode(shiftedCharCode);
+      } else {
+        result += string.charAt(i);
+      }
+    }
     return result;
-},
+  },
   decode: function(offset, string) {
     if (typeof offset !== 'number') {
       throw new TypeError('O primeiro argumento deve ser um número.');
@@ -30,13 +30,13 @@ const cipher = {
     for (let i = 0; i < string.length; i++) {
       const charCode = string.charCodeAt(i);
       if (charCode >= 65 && charCode <= 90) {
-      const shiftedCharCode = charCode - 65 - offset;
-      while (shiftedCharCode < 0) {
-      result += 26;
+        const shiftedCharCode = charCode - 65 - offset;
+        while (shiftedCharCode < 0) {
+          result += 26;
+        }
+        result = String.fromCharCode ((shiftedCharCode%26)+65);
+      } 
     }
-      result = String.fromCharCode ((shiftedCharCode%26)+65);
-  } 
-  }
     return result;
   }
 };
