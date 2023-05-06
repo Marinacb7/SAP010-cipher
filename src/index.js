@@ -21,5 +21,5 @@ decodeButton.addEventListener('click', function() {
   const decodedMessage = cipher.decode(offset, message);
   resultOutput.value = decodedMessage;
 });
-   
+
 console.log(cipher);

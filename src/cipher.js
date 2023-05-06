@@ -1,6 +1,5 @@
-//Codificar a mensagem
 const cipher = {
-  encode: function(offset, string) {
+  encode(offset, string) {
     if (typeof offset !== 'number') {
       throw new TypeError('O primeiro argumento deve ser um número.');
     }
@@ -9,17 +8,19 @@ const cipher = {
     }
     let result = "";
     for (let i = 0; i < string.length; i++) {
-      const charCode = string.charCodeAt(i);
-      if (charCode >= 65 && charCode <= 90) {
+      const char = string[i];
+      if (/[A-Z]/.test(char)) {
+        const charCode = char.charCodeAt(0);
         const shiftedCharCode = ((charCode - 65 + offset) % 26) + 65;
         result += String.fromCharCode(shiftedCharCode);
       } else {
-        result += string.charAt(i);
+        result += char;
       }
     }
     return result;
   },
-  decode: function(offset, string) {
+
+  decode(offset, string) {
     if (typeof offset !== 'number') {
       throw new TypeError('O primeiro argumento deve ser um número.');
     }
@@ -28,17 +29,19 @@ const cipher = {
     }
     let result = "";
     for (let i = 0; i < string.length; i++) {
-      const charCode = string.charCodeAt(i);
-      if (charCode >= 65 && charCode <= 90) {
+      const char = string[i];
+      if (/[A-Z]/.test(char)) {
+        const charCode = char.charCodeAt(0);
         const shiftedCharCode = charCode - 65 - offset;
-        while (shiftedCharCode < 0) {
-          result += 26;
-        }
-        result = String.fromCharCode ((shiftedCharCode%26)+65);
-      } 
+        const decodedCharCode = ((shiftedCharCode % 26) + 26) % 26 + 65;
+        result += String.fromCharCode(decodedCharCode);
+      } else {
+        result += char;
+      }
     }
     return result;
   }
 };
 
 export default cipher;
+
