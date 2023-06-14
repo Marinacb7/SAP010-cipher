@@ -1,25 +1,28 @@
 import cipher from './cipher.js';
-// Definição das variáveis
-const messageInput = document.getElementById('message-input');
-const offsetInput = document.getElementById('offset-input');
+
 const encodeButton = document.getElementById('encode-button');
 const decodeButton = document.getElementById('decode-button');
+const clearButton = document.getElementById('clear-button');
+const messageInput = document.getElementById('message-input');
+const offsetInput = document.getElementById('offset-input');
 const resultOutput = document.getElementById('result-output');
 
-// Chamar a função de encode ao botão
-encodeButton.addEventListener('click', function() {
-  const message = messageInput.value;
+encodeButton.addEventListener('click', () => {
   const offset = parseInt(offsetInput.value);
+  const message = messageInput.value;
   const encodedMessage = cipher.encode(offset, message);
   resultOutput.value = encodedMessage;
 });
 
-// Chamar a função de decode ao botão
-decodeButton.addEventListener('click', function() {
-  const message = messageInput.value;
+decodeButton.addEventListener('click', () => {
   const offset = parseInt(offsetInput.value);
+  const message = messageInput.value;
   const decodedMessage = cipher.decode(offset, message);
   resultOutput.value = decodedMessage;
 });
 
-console.log(cipher);
+clearButton.addEventListener('click', () => {
+  messageInput.value = '';
+  offsetInput.value = '';
+  resultOutput.value = '';
+});

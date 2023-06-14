@@ -1,6 +1,3 @@
-// [Português]
-// Importamos o objeto `cipher`, que contém os métodos `encode` e `decode`
-
 import cipher from '../src/cipher';
 
 describe('cipher', () => {
@@ -83,3 +80,88 @@ describe('cipher', () => {
   });
 
 });
+
+const assert = require('assert');
+
+describe('cipher', () => {
+  describe('encode', () => {
+    it('should encode the string with the given offset', () => {
+      const offset = 3;
+      const string = 'HELLO';
+      const expected = 'KHOOR';
+      
+      const result = cipher.encode(offset, string);
+      
+      assert.strictEqual(result, expected);
+    });
+
+    it('should handle non-alphabetic characters and preserve them', () => {
+      const offset = 5;
+      const string = 'HELLO, WORLD!';
+      const expected = 'MJQQT, BTWQI!';
+      
+      const result = cipher.encode(offset, string);
+      
+      assert.strictEqual(result, expected);
+    });
+
+    it('should throw a TypeError if the offset is not a number', () => {
+      const offset = '3';
+      const string = 'HELLO';
+
+      assert.throws(() => {
+        cipher.encode(offset, string);
+      }, TypeError);
+    });
+
+    it('should throw a TypeError if the string is not a string', () => {
+      const offset = 3;
+      const string = 123;
+
+      assert.throws(() => {
+        cipher.encode(offset, string);
+      }, TypeError);
+    });
+  });
+
+  describe('decode', () => {
+    it('should decode the string with the given offset', () => {
+      const offset = 3;
+      const string = 'KHOOR';
+      const expected = 'HELLO';
+      
+      const result = cipher.decode(offset, string);
+      
+      assert.strictEqual(result, expected);
+    });
+
+    it('should handle non-alphabetic characters and preserve them', () => {
+      const offset = 5;
+      const string = 'MJQQT, BTWQI!';
+      const expected = 'HELLO, WORLD!';
+      
+      const result = cipher.decode(offset, string);
+      
+      assert.strictEqual(result, expected);
+    });
+
+    it('should throw a TypeError if the offset is not a number', () => {
+      const offset = '3';
+      const string = 'KHOOR';
+
+      assert.throws(() => {
+        cipher.decode(offset, string);
+      }, TypeError);
+    });
+
+    it('should throw a TypeError if the string is not a string', () => {
+      const offset = 3;
+      const string = 123;
+
+      assert.throws(() => {
+        cipher.decode(offset, string);
+      }, TypeError);
+    });
+  });
+});
+
