@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-    <body>
-      <section id="root">
-        <h1>Encripted Message</h1>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Criptografia FBI</h1>
+    <p>Este site é destinado a usuários que precisam enviar mensagens secretas ou decodificar mensagens encontradas e
+      recebidas!!</p>
+    <p>Mas lembre-se, tudo que está aqui é secreto!!</p>
+  </header>
+  <main>
+    <section id="root">
+
+      <div class="code-container">
         <label for="message-input">Message</label>
-        <textarea id="message-input"></textarea>
+        <textarea id="message-input" name="message" required></textarea>
+
         <label for="offset-input">Offset</label>
-        <input type="number" id="offset-input">
-        <br>
-        <button id="encode-button">Encode</button>
-        <button id="decode-button">Decode</button>
-        <br>
-        <label for="result-output">Answer</label>
-        <textarea id="result-output"></textarea>
-      </section>
-      <script src="index.js" type="module"></script>
-    </body>
+        <input type="number" id="offset-input" name="offset" required>
+
+        <button type="button" id="encode-button">Encode</button>
+        <button type="button" id="decode-button">Decode</button>
+
+        <label for="result-output">Result</label>
+        <textarea id="result-output" name="result" readonly></textarea>
+
+        <button type="button" id="clear-button">Clear All</button>
+      </div>
+
+      <div class="image-fbi"></div>
+
+    </section>
+  </main>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
