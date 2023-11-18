@@ -1,6 +1,5 @@
 body {
   font-family: 'Raleway', Arial, sans-serif;
-  background-color: lightblue;
 }
 
 #root {
@@ -15,7 +14,7 @@ body {
 
 .code-container {
   padding: 40px;
-  background-color: lightblue;
+  background-color: white;
   align-items: center;
 }
 
