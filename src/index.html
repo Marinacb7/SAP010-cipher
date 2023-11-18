@@ -1,44 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <title>Encryption Methods</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-  <title>Caesar Cipher</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <header>
+      <h1>Encryption Methods</h1>
+      <p>Use diferentes métodos de criptografia para codificar ou decodificar suas mensagens!</p>
+    </header>
+    <main>
+      <section id="root">
+        <div class="code-container">
+          <label for="message-input">Mensagem</label>
+          <textarea id="message-input" name="message" required></textarea>
 
-<body>
-  <header>
-    <h1>Criptografia FBI</h1>
-    <p>Este site é destinado a usuários que precisam enviar mensagens secretas ou decodificar mensagens encontradas e
-      recebidas!!</p>
-    <p>Mas lembre-se, tudo que está aqui é secreto!!</p>
-  </header>
-  <main>
-    <section id="root">
+          <!-- Instruções para a Cifra de César -->
+          <div id="caesar-instructions" class="instructions">
+            <h2>Cifra de César</h2>
+            <p>
+              Use o campo "Caesar Offset" para inserir um número (deslocamento)
+              e, em seguida, clique em "Encode Caesar" para criptografar ou
+              "Decode Caesar" para descriptografar.
+            </p>
+          </div>
 
-      <div class="code-container">
-        <label for="message-input">Message</label>
-        <textarea id="message-input" name="message" required></textarea>
+          <div id="caesar-options">
+            <label for="caesar-offset">Caesar Offset</label>
+            <input
+              type="number"
+              id="caesar-offset"
+              name="caesar-offset"
+              required
+            />
+            <button type="button" id="encode-caesar-button">
+              Encode Caesar
+            </button>
+            <button type="button" id="decode-caesar-button">
+              Decode Caesar
+            </button>
+          </div>
 
-        <label for="offset-input">Offset</label>
-        <input type="number" id="offset-input" name="offset" required>
+          <!-- Instruções para a Cifra de Vigenère -->
+          <div id="vigenere-instructions" class="instructions">
+            <h2>Cifra de Vigenère</h2>
+            <p>
+              Insira uma palavra-chave no campo "Keyword (for Vigenère)" e sua
+              mensagem no campo "Message". Clique em "Encode Vigenère" para
+              criptografar ou "Decode Vigenère" para descriptografar.
+            </p>
+          </div>
 
-        <button type="button" id="encode-button">Encode</button>
-        <button type="button" id="decode-button">Decode</button>
+          <label for="keyword-input">Keyword (for Vigenère)</label>
+          <input type="text" id="keyword-input" name="keyword" />
 
-        <label for="result-output">Result</label>
-        <textarea id="result-output" name="result" readonly></textarea>
+          <button type="button" id="encode-vigenere-button">
+            Encode Vigenère
+          </button>
+          <button type="button" id="decode-vigenere-button">
+            Decode Vigenère
+          </button>
 
-        <button type="button" id="clear-button">Clear All</button>
-      </div>
+          <!-- Instruções para a Cifra de Substituição -->
+          <div id="substitution-instructions" class="instructions">
+            <h2>Cifra de Substituição</h2>
+            <p>
+              Insira sua mensagem no campo "Message". Clique em "Encode
+              Substitution" para criptografar ou "Decode Substitution" para
+              descriptografar.
+            </p>
+          </div>
 
-      <div class="image-fbi"></div>
+          <button type="button" id="encode-substitution-button">
+            Encode Substitution
+          </button>
+          <button type="button" id="decode-substitution-button">
+            Decode Substitution
+          </button>
 
-    </section>
-  </main>
-  <script src="index.js" type="module"></script>
-</body>
+          <label for="result-output">Result</label>
+          <textarea id="result-output" name="result" readonly></textarea>
 
+          <button type="button" id="clear-button">Limpar</button>
+          <button type="button" id="copy-result-button">Copiar</button>
+        </div>
+      </section>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
