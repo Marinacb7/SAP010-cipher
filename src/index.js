@@ -1,21 +1,22 @@
 import caesarCipher from './caesarCipher.js';
-/* import vigenereCipher from './vigenereCipher.js';
-import substitutionCipher from './substitutionCipher.js'; */
+import vigenereCipher from './vigenereCipher.js';
+import substitutionCipher from './substitutionCipher.js'; 
 
 const encodeCaesarButton = document.getElementById('encode-caesar-button');
 const decodeCaesarButton = document.getElementById('decode-caesar-button');
-/* const encodeVigenereButton = document.getElementById('encode-vigenere-button');
+const encodeVigenereButton = document.getElementById('encode-vigenere-button');
 const decodeVigenereButton = document.getElementById('decode-vigenere-button');
 const encodeSubstitutionButton = document.getElementById('encode-substitution-button');
-const decodeSubstitutionButton = document.getElementById('decode-substitution-button'); */
+const decodeSubstitutionButton = document.getElementById('decode-substitution-button'); 
 const clearButton = document.getElementById('clear-button');
 const messageInput = document.getElementById('message-input');
 const offsetInput = document.getElementById('caesar-offset');
-// const keywordInput = document.getElementById('keyword-input');
+const keywordInput = document.getElementById('keyword-input');
 const resultOutput = document.getElementById('result-output')
 
+// Caesar Cipher
 encodeCaesarButton.addEventListener('click', () => {
-  const offset = parseInt(prompt('Enter the Caesar offset:'));
+  const offset = parseInt(offsetInput.value);
   const message = messageInput.value.toUpperCase();
   const encodedMessage = caesarCipher.encode(offset, message);
   resultOutput.value = encodedMessage;
@@ -23,19 +24,13 @@ encodeCaesarButton.addEventListener('click', () => {
 
 decodeCaesarButton.addEventListener('click', () => {
   const offset = parseInt(offsetInput.value);
-  const message = messageInput.value;
+  const message = messageInput.value.toUpperCase();
   const decodedMessage = caesarCipher.decode(offset, message);
   resultOutput.value = decodedMessage;
 });  
 
-/* decodeCaesarButton.addEventListener('click', () => {
-  const offset = parseInt(prompt('Enter the Caesar offset:'));
-  const message = messageInput.value.toUpperCase();
-  const decodedMessage = caesarCipher.decode(offset, message);
-  resultOutput.value = decodedMessage;
-}); */
-
-/* encodeVigenereButton.addEventListener('click', () => {
+// Vigenere Cipher
+encodeVigenereButton.addEventListener('click', () => {
   const keyword = keywordInput.value.toUpperCase();
   const message = messageInput.value.toUpperCase();
   const encodedMessage = vigenereCipher.encode(keyword, message);
@@ -49,24 +44,30 @@ decodeVigenereButton.addEventListener('click', () => {
   resultOutput.value = decodedMessage;
 });
 
+// Substitution Cipher
+const key = 'SECRETKEY';
+
 encodeSubstitutionButton.addEventListener('click', () => {
   const message = messageInput.value.toUpperCase();
-  const encodedMessage = substitutionCipher.encode(message);
+  const encodedMessage = substitutionCipher.encode(message, key); 
   resultOutput.value = encodedMessage;
 });
 
 decodeSubstitutionButton.addEventListener('click', () => {
   const message = messageInput.value.toUpperCase();
-  const decodedMessage = substitutionCipher.decode(message);
+  const decodedMessage = substitutionCipher.decode(message, key); 
   resultOutput.value = decodedMessage;
-}); */
+});
 
+// Limpar preenchimento
 clearButton.addEventListener('click', () => {
   messageInput.value = '';
   offsetInput.value = '';
   resultOutput.value = '';
+  keywordInput.value = '';
 });
-// Função para copiar o texto para a área de transferência
+
+// Copiar o texto para a área de transferência
 function copyTextToClipboard(text) {
   navigator.clipboard.writeText(text)
     .then(() => {
@@ -77,7 +78,6 @@ function copyTextToClipboard(text) {
     });
 }
 
-// Adicionando evento ao botão de cópia
 const copyResultButton = document.getElementById('copy-result-button');
 copyResultButton.addEventListener('click', () => {
   const resultText = document.getElementById('result-output').value;
