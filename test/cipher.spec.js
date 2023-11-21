@@ -182,20 +182,25 @@ describe('Substitution Cipher', () => {
   });
 
   describe('decode', () => {
-    it('should decode the string with the given key', () => {
+    it('should decode a simple encoded message', () => {
+      const message = 'AOGGJ, UJNGW!';
       const key = 'KEYWORD';
-      const message = 'RIJJK';
-      const expected = 'HELLO';
-      const result = substitutionCipher.decode(message, key);
-      expect(result).toBe(expected);
+      const decodedMessage = substitutionCipher.decode(message, key);
+      expect(decodedMessage).toBe('HELLO, WORLD!');
     });
 
-    it('should handle non-alphabetic characters and preserve them', () => {
+    it('should handle decoding non-alphabetic characters', () => {
+      const message = 'AOGGJ! 123';
       const key = 'KEYWORD';
-      const message = 'RIJJK, HTLSI!';
-      const expected = 'HELLO, WORLD!';
-      const result = substitutionCipher.decode(message, key);
-      expect(result).toBe(expected);
+      const decodedMessage = substitutionCipher.decode(message, key);
+      expect(decodedMessage).toBe('HELLO! 123');
+    });
+
+    it('should correctly decode a complex encoded message', () => {
+      const message = 'PSEPQBQSQBJI';
+      const key = 'KEYWORD';
+      const decodedMessage = substitutionCipher.decode(message, key);
+      expect(decodedMessage).toBe('SUBSTITUTION');
     });
   });
 });

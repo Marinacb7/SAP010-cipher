@@ -38,7 +38,15 @@ const substitutionCipher = {
   
   decode(string, key) {
     const substitutionTable = this.generateSubstitutionTable(key);
-    const reversedTable = this.reverseSubstitutionTable(substitutionTable);
+    const reversedTable = {};
+    
+    for (const char in substitutionTable) {
+      // eslint-disable-next-line no-prototype-builtins
+      if (substitutionTable.hasOwnProperty(char)) {
+        reversedTable[substitutionTable[char]] = char; // Inverte as chaves e os valores
+      }
+    }
+  
     string = string.toUpperCase();
     let decodedMessage = '';
   
@@ -52,18 +60,7 @@ const substitutionCipher = {
       }
     }
     return decodedMessage;
-  },
-  
-  reverseSubstitutionTable(substitutionTable) {
-    const reversedTable = {};
-    for (const key in substitutionTable) {
-      // eslint-disable-next-line no-prototype-builtins
-      if (substitutionTable.hasOwnProperty(key)) {
-        reversedTable[substitutionTable[key]] = key;
-      }
-    }
-    return reversedTable;
-  }
+  }  
 };
   
 export default substitutionCipher;
