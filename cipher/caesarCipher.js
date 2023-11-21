@@ -1,4 +1,4 @@
-const cipher = {
+const caesarCipher = {
   encode(offset, string) {
     const ALPHABET_START = 65; // Valor ASCII da letra 'A'
     const ALPHABET_SIZE = 26; // Tamanho do alfabeto
@@ -54,6 +54,6 @@ const cipher = {
   }
 };
 
-export default cipher;
+export default caesarCipher;
 
 
