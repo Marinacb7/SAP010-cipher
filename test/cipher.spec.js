@@ -1,6 +1,6 @@
-import caesarCipher from '../src/caesarCipher';
-import vigenereCipher from '../src/vigenereCipher';
-import substitutionCipher from '../src/substitutionCipher';
+import caesarCipher from '../src/cipher/caesarCipher';
+import vigenereCipher from '../src/cipher/vigenereCipher';
+import substitutionCipher from '../src/cipher/substitutionCipher';
 
 describe('Caesar Cipher', () => {
   describe('encode', () => {

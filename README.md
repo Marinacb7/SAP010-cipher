@@ -1,4 +1,4 @@
-# Decodificação FBI
+# Encryption Methods
 
 ## Índice
 
@@ -17,7 +17,15 @@ Este método de criptografia foi utilizado pelo Imperador Romano Júlio César p
 
 Embora a Cifra de César seja fácil de entender e implementar, ela é facilmente decifrada por meio de técnicas de análise de frequência, tornando-a inadequada para a criptografia de dados sensíveis. No entanto, ela é frequentemente utilizada em jogos e desafios criptográficos, bem como um exemplo introdutório em cursos de segurança da informação.
 
-A ideia inicial deste aplicativo foi gerar um sistema que permitisse aos agentes do FBI a digitação de uma mensagem e um valor de deslocamento, que determina quantas posições cada letra deve ser deslocada na cifra, possibilitando a resolução de mensagens recebidas ou encontradas em evidências de forma mais ágil. É possível então escolher se deseja criptografar ou descriptografar a mensagem, e o resultado será exibido.
+Dito isto, decidi adicionar dois novos métodos de criptografia, a Cifra de Vigenère e a Cifra de Substituição.
+
+## Cifra de Vigenère
+
+Cifra polialfabética, um avanço em relação à Cifra de César, que utiliza diferentes deslocamentos em diferentes posições do texto. Ela usa uma palavra-chave para encriptar a mensagem. Por exemplo, se a palavra-chave for "KEY" e a mensagem for "HELLO", ela repetirá a palavra-chave até ter o mesmo comprimento da mensagem (KEYKEYK) e, para cada letra da mensagem, aplicará um deslocamento correspondente à letra da palavra-chave. Esse deslocamento é determinado pela posição da letra na palavra-chave no alfabeto. Por exemplo, se a palavra-chave é "KEY" e a letra da mensagem é "H", o deslocamento será determinado pela letra "K" da palavra-chave. Isso é feito para cada letra da mensagem.
+
+## Cifra de Substituição
+
+Uma das cifras mais simples e antigas. Ela funciona substituindo cada letra do texto original por outra letra do alfabeto de forma consistente. Por exemplo, se a letra "A" é substituída pela letra "D", toda ocorrência da letra "A" na mensagem será trocada por "D". Isso pode ser feito manualmente ou usando uma tabela de substituição predefinida. Por exemplo, se tivermos a substituição: "A" -> "D", "B" -> "E", "C" -> "F", etc., então a palavra "HELLO" se tornaria "KHOOR".
 
 ## 2. Instalação
 
@@ -25,27 +33,30 @@ Para instalar este aplicativo, você precisará ter um navegador web moderno ins
 
 ## 3. Uso
 
-Para usar a Decodificação FBI, basta digitar uma mensagem e um valor de deslocamento nos campos de entrada e clicar no botão "Codificar" ou "Decodificar" para criptografar ou descriptografar a mensagem, respectivamente. O resultado será exibido no campo de saída.
+Para usar o aplicativo, basta digitar uma mensagem, seguir as instruções do tipo de método escolhido e clicar no botão "Encode" ou "Decode" para criptografar ou descriptografar a mensagem, respectivamente. O resultado será exibido no campo de saída.
 
-O aplicativo só funciona com letras maiúsculas, então todas as letras minúsculas serão convertidas em maiúsculas automaticamente.
+O aplicativo só funciona com letras maiúsculas, então todas as letras minúsculas serão convertidas em maiúsculas automaticamente no resultado.
 
 ## 4. Decisões Tomadas
 
 Ao projetar este aplicativo, várias decisões foram tomadas:
 
-* A Cifra de César foi escolhida como o método de criptografia devido à sua simplicidade e facilidade de implementação.
+* A Cifra de César foi escolhida como o método de criptografia inicial devido à sua simplicidade e facilidade de implementação.
 * O aplicativo foi projetado para funcionar apenas com letras maiúsculas para simplificar o código e reduzir o risco de erros.
-* A interface do usuário foi projetada com um esquema de cores azul/vermelho/amarelo para seguir o logotipo do FBI.
 * Caixas arredondadas foram usadas para tornar as seções de mensagens e resultados visualmente mais atraentes e distinguir dos campos de entrada.
 * Botões responsivos foram usados para melhorar a experiência do usuário em diferentes dispositivos e tamanhos de tela.
-* Uma imagem de fundo foi adicionada para criar um efeito de marca d'água e dar ao aplicativo uma aparência mais profissional.
 
-## 5. Futuras Melhorias
+## 5. Atuais Melhorias
 
-Aqui estão algumas ideias para futuras melhorias no aplicativo:
+Melhorias adicionadas no aplicativo:
 
-* Permitir que o usuário escolha entre diferentes cifras, como a Cifra de César ou a Cifra de Vigenere.
-* Adicionar suporte para letras minúsculas, números e símbolos.
-* Melhorar a interface do usuário com estilização e animações mais avançadas.
-* Adicionar um botão de cópia para a área de transferência para facilitar a cópia da mensagem criptografada ou descriptografada.
-* Adicionar um botão "redefinir" para limpar os campos de entrada e saída.
+* Permitir que o usuário escolha entre diferentes cifras, como a Cifra de César, Cifra de Vigenere e Cifra de Substituição.
+* Adicionado suporte para números e símbolos.
+* Melhorias na interface do usuário com estilização e animações mais avançadas, deixando a visualização mais confortável.
+* Utilização de Canva para criação de uma paleta de cores que interagisse com o background.
+* Adicionado um botão de cópia para a área de transferência para facilitar a cópia da mensagem criptografada ou descriptografada.
+* Adicionado um botão "Limpar" para limpar os campos de entrada e saída.
+
+## 6. Layout 
+
+![Background](src/css/index.png)
