@@ -1,6 +1,6 @@
-import caesarCipher from './caesarCipher.js';
-import vigenereCipher from './vigenereCipher.js';
-import substitutionCipher from './substitutionCipher.js'; 
+import caesarCipher from './cipher/caesarCipher.js';
+import vigenereCipher from './cipher/vigenereCipher.js';
+import substitutionCipher from './cipher/substitutionCipher.js'; 
 
 const encodeCaesarButton = document.getElementById('encode-caesar-button');
 const decodeCaesarButton = document.getElementById('decode-caesar-button');
