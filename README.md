@@ -6,7 +6,8 @@
 * [2. Instalação](#2-instalação)
 * [3. Uso](#3-uso)
 * [4. Decisões Tomadas](#5-decisões-tomadas)
-* [5. Futuras Melhorias](#5-futuras-melhorias)
+* [5. Atuais Melhorias](#5-atuais-melhorias)
+* [6. Layout](#6-layout)
 
 ***
 
